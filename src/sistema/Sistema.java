@@ -21,10 +21,6 @@ public class Sistema {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLocationRelativeTo(null);
 
-        tela = new CargosConsultar();
-        tela.setVisible(true);
-        frame.add(tela);
-
-        frame.setVisible(true);
+        Navegador.login();
     }
 }

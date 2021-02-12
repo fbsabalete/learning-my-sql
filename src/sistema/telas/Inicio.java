@@ -1,5 +1,7 @@
 package sistema.telas;
 
+import sistema.Navegador;
+
 import javax.swing.*;
 
 public class Inicio extends JPanel {
@@ -8,6 +10,7 @@ public class Inicio extends JPanel {
     public Inicio(){
         criarComponentes();
         criarEventos();
+        Navegador.habilitaMenu();
     }
 
     private void criarComponentes(){

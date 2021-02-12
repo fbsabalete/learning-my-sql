@@ -1,5 +1,7 @@
 package sistema.telas;
 
+import sistema.Navegador;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -50,6 +52,12 @@ public class Login extends JPanel {
         botaoEntrar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                // validando as credenciais
+                if(campoUsuario.getText().equals("admin") && new String(campoSenha.getPassword()).equals("admin")){
+                    Navegador.inicio();
+                }else{
+                    JOptionPane.showMessageDialog(null, "Acesso não permitido");
+                }
 
             }
         });
